@@ -117,85 +117,51 @@ backToTopButton.addEventListener('click', () => {
         behavior: 'smooth'
     });
 });
-document.addEventListener('DOMContentLoaded', function () {
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const mobileMenu = document.querySelector('.mobile-menu');
-    const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
+// Get DOM elements
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const mobileMenu = document.querySelector('.mobile-menu');
+const navbar = document.querySelector('.navbar');
 
-    // Toggle menu
-    mobileMenuBtn.addEventListener('click', function () {
-        this.classList.toggle('active');
-        mobileMenu.classList.toggle('active');
-        document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
-    });
+// Toggle menu function
+function toggleMenu() {
+    mobileMenuBtn.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+    document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+}
 
-    // Close menu when clicking a link
-    mobileMenuLinks.forEach(link => {
-        link.addEventListener('click', function () {
-            mobileMenuBtn.classList.remove('active');
-            mobileMenu.classList.remove('active');
-            document.body.style.overflow = '';
-        });
-    });
+// Add click event listener to menu button
+mobileMenuBtn.addEventListener('click', toggleMenu);
 
-    // Close menu when clicking outside
-    document.addEventListener('click', function (e) {
-        if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target) && mobileMenu.classList.contains('active')) {
-            mobileMenuBtn.classList.remove('active');
-            mobileMenu.classList.remove('active');
-            document.body.style.overflow = '';
-        }
+// Close menu when clicking menu items
+const menuLinks = document.querySelectorAll('.mobile-menu a');
+menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenuBtn.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = '';
     });
 });
-document.addEventListener('DOMContentLoaded', function () {
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const mobileMenu = document.querySelector('.mobile-menu');
-    const navbar = document.querySelector('.navbar');
-    let isMenuOpen = false;
 
-    // Toggle mobile menu
-    mobileMenuBtn.addEventListener('click', function () {
-        isMenuOpen = !isMenuOpen;
-        mobileMenuBtn.classList.toggle('active');
-        mobileMenu.classList.toggle('active');
-        document.body.style.overflow = isMenuOpen ? 'hidden' : '';
-    });
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!mobileMenuBtn.contains(e.target) && 
+        !mobileMenu.contains(e.target) && 
+        mobileMenu.classList.contains('active')) {
+        toggleMenu();
+    }
+});
 
-    // Close menu when clicking menu items
-    const mobileMenuItems = mobileMenu.querySelectorAll('a');
-    mobileMenuItems.forEach(item => {
-        item.addEventListener('click', () => {
-            isMenuOpen = false;
-            mobileMenuBtn.classList.remove('active');
-            mobileMenu.classList.remove('active');
-            document.body.style.overflow = '';
-        });
-    });
-
-    // Close menu when clicking outside
-    document.addEventListener('click', function (event) {
-        if (isMenuOpen &&
-            !event.target.closest('.mobile-menu') &&
-            !event.target.closest('.mobile-menu-btn')) {
-            isMenuOpen = false;
-            mobileMenuBtn.classList.remove('active');
-            mobileMenu.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-    });
-
-    // Handle scroll effects
-    let lastScroll = 0;
-    window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-
-        // Add shadow on scroll
-        if (currentScroll > 20) {
-            navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.05)';
-        } else {
-            navbar.style.boxShadow = 'none';
-        }
-
-        lastScroll = currentScroll;
-    });
+// Handle scroll
+let lastScrollTop = 0;
+window.addEventListener('scroll', () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (scrollTop > lastScrollTop && scrollTop > 100) {
+        // Scrolling down
+        navbar.style.transform = 'translateY(-100%)';
+    } else {
+        // Scrolling up
+        navbar.style.transform = 'translateY(0)';
+    }
+    lastScrollTop = scrollTop;
 });

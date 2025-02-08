@@ -1532,3 +1532,38 @@ a {
         height: -webkit-fill-available;
     }
 }
+@media (max-width: 480px) {
+    .subcont {
+        font-size: 1rem;
+        max-width: 100%;
+        padding: 0 0.75rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .subcont {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        padding: 0 0.5rem;
+    }
+}
+
+/* Additional Hero Content Responsiveness */
+@media (max-width: 768px) {
+    .hero-content {
+        gap: 2rem;
+        padding-top: 80px;
+    }
+
+    .hero-text {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .subcont {
+        padding-top: 60px;
+        gap: 1.5rem;
+    }
+}
