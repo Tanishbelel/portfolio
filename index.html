@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">
+                <div class="logo-icon"></div>
+                Portfolio
+            </div>
+            <div class="nav-links">
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+                <a href="#socials">Socials</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div class="mobile-menu">
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+            <a href="#socials">Socials</a>
+        </div>
+    </nav>
+
+
+    <section class="hero" id="about">
+        <div class="parallax-bg">
+            <div class="parallax-shape shape1"></div>
+            <div class="parallax-shape shape2"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Tanish Belel</h1>
+                <div class="typing-container">
+                    <span class="static-text">I'm a</span>&nbsp;<span class="typed-text"></span><span
+                        class="cursor">&nbsp;</span>
+                </div>
+                <p class="hero-subtitle">Hi, I'm Tanish Belel, a highly enthusiastic full-stack web developer passionate
+                    about building innovative and user-friendly digital experiences. I thrive on solving complex
+                    problems and crafting seamless web solutions.</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="cta-btn primary-btn">Contact Me</a>
+                    <a href="https://drive.google.com/file/d/1M2rWgr_iWjwDqmzTA3yf4n0VtY9bGQbm/view?usp=sharing"
+                        class="cta-btn secondary-btn" target="_blank">View Resume</a>
+                </div>
+            </div>
+            <div class="profile-photo-container">
+                <img src="pfp1.png" alt="Tanish Belel" class="profile-photo">
+            </div>
+        </div>
+        <div class="curve-container">
+            <svg class="curve" viewBox="0 0 1200 150" preserveAspectRatio="none">
+                <path class="curve-fill" d="M0,32 C320,154 480,0 1200,32 L1200,150 L0,150 Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <section class="cards-section" id="skills">
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-content">
+                    <h3>Experience</h3>
+                    <span class="stats-number">2+</span>
+                    <p>Years of professional development experience building scalable applications and solving problems
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Technical Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-icon">CSS/Javascript</div>
+                        <div class="skill-icon">Django</div>
+                        <div class="skill-icon">C/C++</div>
+                        <div class="skill-icon">Python</div>
+                        <div class="skill-icon">Java</div>
+                        <div class="skill-icon">MySQL</div>
+                        <div class="skill-icon">Flask</div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Projects</h3>
+                    <span class="stats-number">20+</span>
+                    <p>Successful projects</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cards-section" id="projects">
+        <h2 class="section-title">Achievements</h2>
+        <div class="cards-grid achievements-grid">
+            <div class="card project-card achievement-card"
+                onclick="openModal('hack1.png', 'Technova Hackathon', '24 hours hackathon held by Xavier Institute of Engineering')">
+                <img src="hack1.png" alt="Technova Hackathon">
+                <div class="achievement-content">
+                    <h3>Technova Hackathon</h3>
+                    <div class="achievement-overlay">
+                        <p>24 hours hackathon held by Xavier Institute of Engineering</p>
+                        <span class="view-more">Click to expand</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card project-card achievement-card"
+                onclick="openModal('uni1.png', 'Overall 2nd Rank', 'Topped the MU at Fr. Conceicao Rodrigues College of Engineering')">
+                <img src="uni1.png" alt="Overall 2nd Rank">
+                <div class="achievement-content">
+                    <h3>Overall 2nd Rank</h3>
+                    <div class="achievement-overlay">
+                        <p>Topped the MU at Fr. Conceicao Rodrigues College of Engineering</p>
+                        <span class="view-more">Click to expand</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card project-card achievement-card"
+                onclick="openModal('idea1.png', 'Idea Presentation', 'Idea presentation of bail reckoner @Pravin Gandhi College of Law')">
+                <img src="idea1.png" alt="Idea Presentation">
+                <div class="achievement-content">
+                    <h3>Idea Presentation</h3>
+                    <div class="achievement-overlay">
+                        <p>Idea presentation of bail reckoner @Pravin Gandhi College of Law</p>
+                        <span class="view-more">Click to expand</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card project-card achievement-card"
+                onclick="openModal('finals1.jpg', 'BitNBuild Finalist', 'Finalist of an international hackathon held by Fr. Conceicao Rodrigues College of Engineering')">
+                <img src="finals1.jpg" alt="BitNBuild Finalist">
+                <div class="achievement-content">
+                    <h3>BitNBuild Finalist</h3>
+                    <div class="achievement-overlay">
+                        <p>Finalist of an international hackathon held by Fr. Conceicao Rodrigues College of Engineering
+                        </p>
+                        <span class="view-more">Click to expand</span>
+                    </div>
+                </div>
+            </div>
+            <p>And many more on <a href="https://www.linkedin.com/in/tanish-belel-6697b72a7/"><button class="git">
+                        LinkedIn
+                    </button></a></p>
+        </div>
+    </section>
+
+
+    <section class="certificates-section" id="certificates">
+        <h2 class="section-title">Projects</h2>
+        <div class="certificates-grid">
+            <a href="https://print-1-l82a.onrender.com">
+                <div class="certificate-card">
+                    <div class="certificate-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="certificate-title">Print</h3>
+                    <p class="certificate-issuer">A web app made for students and college to cutoff the queue for taking
+                        print</p>
+                    <span class="certificate-date">January 2025</span>
+                </div>
+            </a>
+
+            <a href="https://github.com/Tanishbelel/chatNot">
+                <div class="certificate-card">
+                    <div class="certificate-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="certificate-title">Gemini Chat bot</h3>
+                    <p class="certificate-issuer">Integrating Gemini api and making a chatbot suing flask</p>
+                    <span class="certificate-date">September 2024</span>
+                </div>
+            </a>
+
+            <a href="https://github.com/Tanishbelel/REAL">
+                <div class="certificate-card">
+                    <div class="certificate-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="certificate-title">Swapora</h3>
+                    <p class="certificate-issuer">A web app made for students where they can facilate with the Barter
+                        system</p>
+                    <span class="certificate-date">January 2025</span>
+
+                </div>
+            </a>
+            <a href="https://tanishbelel.github.io/tic-tac-toe/">
+                <div class="certificate-card">
+                    <div class="certificate-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="certificate-title">Tic Tac Toe</h3>
+                    <p class="certificate-issuer">Under standing the fundamentals of Javascript and building logic</p>
+                    <span class="certificate-date">May 2024</span>
+
+                </div>
+            </a>
+
+            <p>And many more on <a href="https://github.com/Tanishbelel"><button class="git"> GitHub
+                    </button></a></p>
+        </div>
+
+    </section>
+
+    <section class="cards-section" id="contact">
+        <h2 class="section-title">Get in Touch</h2>
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <div class="form-group">
+                <input type="hidden" name="access_key" value="e58a1c62-44a4-4884-af39-e3d97b5ce380">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </section>
+    <footer class="footer">
+        <h2 class="section-title" id="socials">Follow Me</h2>
+        <div class="social-links">
+            <a href="https://instagram.com/tanishbelel03" class="social-button instagram">
+                <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                </svg>
+                Instagram
+            </a>
+            <a href="https://www.linkedin.com/in/tanish-belel-6697b72a7/" class="social-button linkedin">
+                <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
+                LinkedIn
+            </a>
+            <a href="https://github.com/Tanishbelel" class="social-button github">
+                <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
+                GitHub
+            </a>
+        </div>
+    </footer>
+    <div id="achievementModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div class="modal-image-container">
+                <img id="modalImage" src="" alt="Achievement">
+            </div>
+            <div class="modal-text">
+                <h2 id="modalTitle"></h2>
+                <p id="modalDescription"></p>
+            </div>
+        </div>
+    </div>
+    <button class="back-to-top" aria-label="Back to top">
+        <svg class="svgIcon" viewBox="0 0 384 512">
+            <path
+                d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z">
+            </path>
+        </svg>
+    </button>
+</body>
+<script src="index.js"></script>
+
+</html>
